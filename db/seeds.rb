@@ -194,7 +194,38 @@ class MorrisCountyScraper
 
 	def seed_property_model
 		@property_data_detail_array.each do |property|
-			Property.create!(:county => property["County"])
+			Property.create!(
+								:tax_year =>property["Tax Year"],
+								:county =>property["County"],
+								:state =>property["State"],
+								:district =>property["District"],
+								:last_updated =>property["Last Updated"],
+								:owner_name =>property["Owner Name"],
+								:owner_street =>property["Owner Street"],
+								:owner_city_state =>property["Owner City State"],
+								:owner_zip_code =>property["Owner Zip Code"],
+								:property_location =>property["Property Location"],
+								:acerage =>property["Acerage"],
+								:year_constructed =>property["Year Constructed"],
+								:building_square_feet =>property["Building Square Feet"],
+								:land_value =>property["Land Value"],
+								:improvement_value =>property["Improvement Value"],
+								:net_taxable_value =>property["Net Taxable Value"],
+								:prior_year_tax =>property["Prior Year Tax"],
+								:curret_year_tax =>property["Current Year Tax"],
+								:sale_price_one =>property["Sales Price 1"],
+								:deed_date_one =>property["Deed Date 1"],
+								:sale_price_two =>property["Sales Price 2"],
+								:deed_date_two =>property["Deed Date 2"],
+								:sale_price_three =>property["Sales Price 3"],
+								:deed_date_three =>property["Deed Date 3"],
+								:sale_price_four =>property["Sales Price 4"],
+								:deed_date_four =>property["Deed Date 4"],
+								:sale_price_five =>property["Sales Price 5"],
+								:deed_date_five =>property["Deed Date 5"],
+								:sale_price_six =>property["Sales Price 6"],
+								:deed_date_six =>property["Deed Date 6"]
+					)
 		end
 	end
 

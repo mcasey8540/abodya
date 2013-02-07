@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20130207013435) do
     t.float    "net_taxable_value"
     t.float    "prior_year_tax"
     t.float    "curret_year_tax"
-    t.float    "sales_price_one"
+    t.float    "sale_price_one"
     t.string   "deed_date_one"
     t.float    "sale_price_two"
     t.string   "deed_date_two"
