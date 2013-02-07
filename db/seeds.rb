@@ -41,7 +41,7 @@ class MorrisCountyScraper
 			end
 
 			array_2.each_with_index do |x,i|
-				if i > 5 and i < 10
+				if i > 5 
 					entry = x.split(",")
 					if entry.size == 20
 							url = "#{entry[6]}"
