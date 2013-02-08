@@ -6,6 +6,8 @@
 		<th>State</th>
 		<th>City</th>
 		<th>Property Location</th>
+		<th>Square Feet</th>
+		<th><%= "#{Time.now.year - 1} Taxes"%></th>		
 		<th>Net Taxable Value</th>
 	</tr>
 
@@ -14,6 +16,8 @@
 		<td><%= property.state%></td>
 		<td><%=property.district%></td>
 		<td><%=property.property_location%></td>
+		<td><%=property.building_square_feet%></td>
+		<td>$ <%=property.prior_year_tax.to_i%></td>		
 		<td>$ <%=property.net_taxable_value.to_i%></td>
 	</tr>
 

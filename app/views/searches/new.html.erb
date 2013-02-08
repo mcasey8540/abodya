@@ -6,21 +6,21 @@
     <%= f.collection_select(:state, Property.select(:state).uniq, :state, :state) %>
   </div>
   <div class="field">
-    <%= f.label :district %><br />
+    <%= f.label :district, "City" %><br />
     <%= f.collection_select(:district, Property.select(:district).uniq.order('district'), :district, :district) %>
   </div>
   <div class="field">
     <%= f.label :min_price, "Price Range" %><br />
-    $ <%= f.text_field :min_price, size: 10 %> -
-    $ <%= f.text_field :max_price, size: 10 %>
+    $ <%= f.text_field :min_price, size: 10, :placeholder => 'Min Price' %> -
+    $ <%= f.text_field :max_price, size: 10, :placeholder => 'Max Price' %>
   </div>
   <div class="field">
     <%= f.label :min_sq_ft, "Minimum Square Feet" %><br />
-    <%= f.text_field :min_sq_ft, size: 10 %>
+    <%= f.text_field :min_sq_ft, size: 10, :placeholder => 'Min Square Feet' %>
   </div>  
   <div class="field">
-    <%= f.label :max_taxes, "Max Property Tax" %><br />
-   $ <%= f.text_field :max_taxes, size: 10 %>
+    <%= f.label :max_taxes, "Max Property Tax"  %><br />
+   $ <%= f.text_field :max_taxes, size: 10, :placeholder => 'Max Property Tax' %>
   </div> 
   </br> 
   <div class="actions"><%= f.submit "Search" %></div>
