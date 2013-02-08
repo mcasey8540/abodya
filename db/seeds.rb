@@ -5,7 +5,7 @@ class MorrisCountyScraper
 
 	def initialize
 		#Q
-		@alpha_array = ["Y","Z"]
+		@alpha_array = ["Y"]
 		@record_url_array = []
 		@record_detail_url_array = []
 		@property_data_detail_array = []

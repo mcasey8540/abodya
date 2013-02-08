@@ -1,26 +1,37 @@
-<h1>Find My Dream Home</h1>
+<h3>My Dream Home</h3>
 
-<%= form_for @search do |f| %>
+<% if notice %>
+  <div class="alert alert-block">
+    <strong>Uh oh!</strong>
+    <ul>
+      <% notice.gsub(/and/,"").split(",").each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @search, :validate => true do |f| %>
   <div class="field">
-    <%= f.label :state %><br />
+    <%= f.label :state %>
     <%= f.collection_select(:state, Property.select(:state).uniq, :state, :state) %>
   </div>
   <div class="field">
-    <%= f.label :district, "City" %><br />
+    <%= f.label :district, "City" %>
     <%= f.collection_select(:district, Property.select(:district).uniq.order('district'), :district, :district) %>
   </div>
   <div class="field">
-    <%= f.label :min_price, "Price Range" %><br />
-    $ <%= f.text_field :min_price, size: 10, :placeholder => 'Min Price' %> -
-    $ <%= f.text_field :max_price, size: 10, :placeholder => 'Max Price' %>
+    <%= f.label :min_price, "Price Range" %>
+    $ <%= f.text_field :min_price, size: 10, :placeholder => 'ex 150000' %> -
+    $ <%= f.text_field :max_price, size: 10, :placeholder => 'ex 250000' %>
   </div>
   <div class="field">
-    <%= f.label :min_sq_ft, "Minimum Square Feet" %><br />
-    <%= f.text_field :min_sq_ft, size: 10, :placeholder => 'Min Square Feet' %>
+    <%= f.label :min_price, "Minimum Square Feet" %>
+    <%= f.text_field :min_sq_ft, size: 10, :placeholder => 'ex 1900' %>
   </div>  
   <div class="field">
-    <%= f.label :max_taxes, "Max Property Tax"  %><br />
-   $ <%= f.text_field :max_taxes, size: 10, :placeholder => 'Max Property Tax' %>
+    <%= f.label :min_price, "Maximum Annual Tax" %>
+   $ <%= f.text_field :max_taxes, size: 10, :placeholder => 'ex 9000' %>
   </div> 
   </br> 
   <div class="actions"><%= f.submit "Search" %></div>
