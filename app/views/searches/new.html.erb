@@ -7,7 +7,7 @@
   </div>
   <div class="field">
     <%= f.label :district %><br />
-    <%= f.collection_select(:district, Property.select(:district).uniq, :district, :district) %>
+    <%= f.collection_select(:district, Property.select(:district).uniq.order('district'), :district, :district) %>
   </div>
   <div class="field">
     <%= f.label :min_price, "Price Range" %><br />
