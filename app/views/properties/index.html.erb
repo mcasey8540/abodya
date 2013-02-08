@@ -4,9 +4,13 @@
   	<h2>Search Beyond the Listings</h2>
   </div>
 </br>
- 		<%= link_to "Find My Home", root_path, class: "btn btn-primary btn-large" %>
+ 		<%= link_to "Find My Home", new_search_path, class: "btn btn-primary btn-large" %>
  		<div>
   </br>
 </div>
 
-
+<% unless @properties.nil? %>
+	<div id="properties">
+	  <%= render @properties %>
+	</div>
+<% end %>

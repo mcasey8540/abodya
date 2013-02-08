@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130207013435) do
+ActiveRecord::Schema.define(:version => 20130208040152) do
 
   create_table "properties", :force => true do |t|
     t.integer  "tax_year"
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(:version => 20130207013435) do
     t.string   "deed_date_six"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+  end
+
+  create_table "searches", :force => true do |t|
+    t.string   "state"
+    t.string   "district"
+    t.integer  "min_price"
+    t.integer  "max_price"
+    t.integer  "min_sq_ft"
+    t.integer  "max_taxes"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
