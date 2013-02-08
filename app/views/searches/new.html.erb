@@ -1,0 +1,28 @@
+<h1>Find My Dream Home</h1>
+
+<%= form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.collection_select(:state, Property.select(:state).uniq, :state, :state) %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br />
+    <%= f.collection_select(:district, Property.select(:district).uniq, :district, :district) %>
+  </div>
+  <div class="field">
+    <%= f.label :min_price, "Price Range" %><br />
+    $ <%= f.text_field :min_price, size: 10 %> -
+    $ <%= f.text_field :max_price, size: 10 %>
+  </div>
+  <div class="field">
+    <%= f.label :min_sq_ft, "Minimum Square Feet" %><br />
+    <%= f.text_field :min_sq_ft, size: 10 %>
+  </div>  
+  <div class="field">
+    <%= f.label :max_taxes, "Max Property Tax" %><br />
+   $ <%= f.text_field :max_taxes, size: 10 %>
+  </div> 
+  </br> 
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
