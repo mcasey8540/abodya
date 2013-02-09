@@ -1,6 +1,9 @@
 <button class="btn"><%= link_to "New Search", new_search_path %></button>
 </br>
 </br>
+
+<h3 id="properties-count"><%= "We found #{@search.properties.size} homes for you!"%></h3>
+
 <table class="table table-striped">
 
 	<tr>
