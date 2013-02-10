@@ -4,8 +4,8 @@ require 'open-uri'
 class MorrisCountyScraper
 
 	def initialize
-		#Q,Z,Y, A
-		@alpha_array = ["B"]
+		#A,B,Q,Z,Y,
+		@alpha_array = ["C"]
 		@record_url_array = []
 		@record_detail_url_array = []
 		@property_data_detail_array = []
