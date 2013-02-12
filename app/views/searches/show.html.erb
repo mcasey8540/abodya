@@ -2,7 +2,7 @@
 </br>
 </br>
 
-<h3 id="properties-count"><%= "We found #{@search.properties.size} homes for you!"%></h3>
+<h3 id="properties-count"><%= "We found #{@search.assessments.size} homes for you!"%></h3>
 
 <table class="table table-striped">
 
@@ -15,14 +15,14 @@
 		<th>Net Taxable Value</th>
 	</tr>
 
-	<% @search.properties.each do |property| %>
+	<% @search.assessments.each do |property| %>
 	<tr>
 		<td><%= property.state%></td>
-		<td><%=property.district%></td>
+		<td><%=property.municipality%></td>
 		<td><%=property.property_location%></td>
-		<td><%=property.building_square_feet%></td>
-		<td>$ <%=property.prior_year_tax.to_i%></td>		
-		<td>$ <%=property.net_taxable_value.to_i%></td>
+		<td><%=property.square_feet%></td>
+		<td>$ <%=property.taxes_one.to_i%></td>		
+		<td>$ <%=property.assessed.to_i%></td>
 	</tr>
 
 	<% end %> 

@@ -14,11 +14,15 @@
 <%= form_for @search, :validate => true do |f| %>
   <div class="field">
     <%= f.label :state %>
-    <%= f.collection_select(:state, Property.select(:state).uniq, :state, :state) %>
+    <%= f.collection_select(:state, Assessment.select(:state).uniq, :state, :state) %>
+  </div>
+  <div class="field">
+    <%= f.label :county %>
+    <%= f.collection_select(:county, Assessment.select(:county).uniq, :county, :county) %>
   </div>
   <div class="field">
     <%= f.label :district, "City" %>
-    <%= f.collection_select(:district, Property.select(:district).uniq.order('district'), :district, :district) %>
+    <%= f.collection_select(:district, Assessment.select(:municipality).uniq.order('municipality'), :municipality, :municipality) %>
   </div>
   <div class="field">
     <%= f.label :min_price, "Price Range" %>

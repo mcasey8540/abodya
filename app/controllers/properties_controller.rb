@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
 
 	def index
-		@property_count = Property.count
+		@assessment_count = Assessment.count
 	end
 
 end
