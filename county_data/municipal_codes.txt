@@ -1,0 +1,53 @@
+Monmouth Aberdeen Township 1301
+Monmouth Allenhurst Borough 1302
+Monmouth Allentown Borough 1303
+Monmouth Asbury Park City 1304
+Monmouth Atlantic Highlands Bor. 1305
+Monmouth Avon-by-the-Sea Bor. 1306
+Monmouth Belmar Borough 1307
+Monmouth Bradley Beach Borough 1308
+Monmouth Brielle Borough 1309
+Monmouth Colts Neck Township 1310
+Monmouth Deal Borough 1311
+Monmouth Eatontown Borough 1312
+Monmouth Englishtown Borough 1313
+Monmouth Fair Haven Borough 1314
+Monmouth Farmingdale Borough 1315
+Monmouth Freehold Borough 1316
+Monmouth Freehold Township 1317
+Monmouth Hazlet Township 1318
+Monmouth Highlands Borough 1319
+Monmouth Holmdel Township 1320
+Monmouth Howell Township 1321
+Monmouth Interlaken Borough 1322
+Monmouth Keansburg Borough 1323
+Monmouth Keyport Borough 1324
+Monmouth Lake Como Borough 1346
+Monmouth Little Silver Borough 1325
+Monmouth Loch Arbour Village 1326
+Monmouth Long Branch City 1327
+Monmouth Manalapan Township 1328
+Monmouth Manasquan Borough 1329
+Monmouth Marlboro Township 1330
+Monmouth Matawan Borough 1331
+Monmouth Middletown Township 1332
+Monmouth Millstone Township 1333
+Monmouth Monmouth Beach Borough 1334
+Monmouth Neptune City Borough 1336
+Monmouth Neptune Township 1335
+Monmouth Ocean Township 1337
+Monmouth Oceanport Borough 1338
+Monmouth Red Bank Borough 1339
+Monmouth Roosevelt Borough 1340
+Monmouth Rumson Borough 1341
+Monmouth Sea Bright Borough 1342
+Monmouth Sea Girt Borough 1343
+Monmouth Shrewsbury Borough 1344
+Monmouth Shrewsbury Township 1345
+Monmouth Spring Lake Borough 1347
+Monmouth Spring Lake Heights Bor. 1348
+Monmouth Tinton Falls Borough 1349
+Monmouth Union Beach Borough 1350
+Monmouth Upper Freehold Township 1351
+Monmouth Wall Township 1352
+Monmouth West Long Branch Boro 1353

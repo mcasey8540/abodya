@@ -11,7 +11,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130208040152) do
+ActiveRecord::Schema.define(:version => 20130212185738) do
+
+  create_table "assessments", :force => true do |t|
+    t.string   "state"
+    t.string   "county"
+    t.string   "municipality"
+    t.string   "property_location"
+    t.string   "property_class"
+    t.string   "owner_name"
+    t.string   "owner_mailing"
+    t.string   "city_state_zip"
+    t.integer  "square_feet"
+    t.integer  "year_built"
+    t.string   "building_class"
+    t.string   "updated"
+    t.float    "acreage"
+    t.float    "taxes_one"
+    t.float    "taxes_two"
+    t.float    "taxes_three"
+    t.float    "taxes_four"
+    t.string   "sale_date"
+    t.float    "sale_price"
+    t.float    "assessed"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "muni_codes", :force => true do |t|
+    t.string   "county"
+    t.string   "city"
+    t.integer  "muni_code"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "properties", :force => true do |t|
     t.integer  "tax_year"
@@ -49,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20130208040152) do
   end
 
   create_table "searches", :force => true do |t|
+    t.string   "county"
     t.string   "state"
     t.string   "district"
     t.integer  "min_price"
