@@ -1,10 +1,4 @@
-require 'CSV'
-require 'pathname'
-
-RailsRoot = Pathname.new(RAILS_ROOT).expand_path
-
-print "Loading data..."
-fileData = File.read (RailsRoot + "db/1300demo093132.csv")
+require 'csv'
 
 class CountyAssessment
 
@@ -15,7 +9,7 @@ class CountyAssessment
 	end
 
 	def get_csv(line_number)
-		CSV.foreach(fileData) do |row|
+		CSV.foreach("#{Rails.root}/db/1300demo093132.csv") do |row|
 			
 		city = ""
 
