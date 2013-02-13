@@ -12,7 +12,7 @@ class CountyAssessment
             #CSV.foreach("#{Rails.root}/db/data/nj/bergen.csv") do |row|
 
 		CSV.foreach("#{Rails.root}/db/data/nj/bergen.csv") do |row|
-			
+	          		
 		city = ""
        	case row[0].to_i
             when 201   
@@ -140,7 +140,7 @@ class CountyAssessment
             when 262    
                   city = "Teterboro "
             when 263    
-                  city = "Upper Saddle River Bo". 
+                  city = "Upper Saddle River Bo" 
             when 264    
                   city = "Waldwick "
             when 265    
@@ -159,7 +159,7 @@ class CountyAssessment
            	      city =  "UNKNOWN"
             end
 
-		if line_number > 0
+		if line_number > 224114 
 			Assessment.create!(
 				:state=>"New Jersey",
 				:county=>"Bergen",
