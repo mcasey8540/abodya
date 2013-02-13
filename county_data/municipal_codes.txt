@@ -51,3 +51,73 @@ Monmouth Union Beach Borough 1350
 Monmouth Upper Freehold Township 1351
 Monmouth Wall Township 1352
 Monmouth West Long Branch Boro 1353
+Bergen, Allendale Borough ,0201
+Bergen, Alpine Borough ,0202
+Bergen, Bergenfield Borough ,0203
+Bergen, Bogota Borough ,0204
+Bergen, Carlstadt Borough ,0205
+Bergen, Cliffside Park Borough ,0206
+Bergen, Closter Borough ,0207
+Bergen, Cresskill Borough ,0208
+Bergen, Demarest Borough ,0209
+Bergen, Dumont Borough ,0210
+Bergen, East Rutherford Borough ,0212
+Bergen, Edgewater Borough ,0213
+Bergen, Elmwood Park Borough ,0211
+Bergen, Emerson Borough ,0214
+Bergen, Englewood City ,0215
+Bergen, Englewood Cliffs Boro ,0216
+Bergen, Fair Lawn Borough ,0217
+Bergen, Fairview Borough ,0218
+Bergen, Fort Lee Borough ,0219
+Bergen, Franklin Lakes Borough ,0220
+Bergen, Garfield City ,0221
+Bergen, Glen Rock Borough ,0222
+Bergen, Hackensack City ,0223
+Bergen, Harrington Park Borough ,0224
+Bergen, Hasbrouck Heights Bor. ,0225
+Bergen, Haworth Borough ,0226
+Bergen, Hillsdale Borough ,0227
+Bergen, Ho Ho Kus Borough ,0228
+Bergen, Leonia Borough ,0229
+Bergen, Little Ferry Borough ,0230
+Bergen, Lodi Borough ,0231
+Bergen, Lyndhurst Township ,0232
+Bergen, Mahwah Township ,0233
+Bergen, Maywood Borough ,0234
+Bergen, Midland Park Borough ,0235
+Bergen, Montvale Borough ,0236
+Bergen, Moonachie Borough ,0237
+Bergen, New Milford Borough ,0238
+Bergen, North Arlington Borough ,0239
+Bergen, Northvale Borough ,0240
+Bergen, Norwood Borough ,0241
+Bergen, Oakland Borough ,0242
+Bergen, Old Tappan Borough ,0243
+Bergen, Oradell Borough ,0244
+Bergen, Palisades Park Borough ,0245
+Bergen, Paramus Borough ,0246
+Bergen, Park Ridge Borough ,0247
+Bergen, Ramsey Borough ,0248
+Bergen, Ridgefield Borough ,0249
+Bergen, Ridgefield Park Village ,0250
+Bergen, Ridgewood Village ,0251
+Bergen, River Edge Borough ,0252
+Bergen, River Vale Township ,0253
+Bergen, Rochelle Park Township ,0254
+Bergen, Rockleigh Borough ,0255
+Bergen, Rutherford Borough ,0256
+Bergen, Saddle Brook Township ,0257
+Bergen, Saddle River Borough ,0258
+Bergen, South Hackensack Twp. ,0259
+Bergen, Teaneck Township ,0260
+Bergen, Tenafly Borough ,0261
+Bergen, Teterboro Borough ,0262
+Bergen, Upper Saddle River Bor. ,0263
+Bergen, Waldwick Borough ,0264
+Bergen, Wallington Borough ,0265
+Bergen, Washington Township ,0266
+Bergen, Westwood Borough ,0267
+Bergen, Woodcliff Lake Borough ,0268
+Bergen, Wood-Ridge Borough ,0269
+Bergen, Wyckoff Township ,0270
