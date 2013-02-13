@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212185738) do
+ActiveRecord::Schema.define(:version => 20130213141355) do
 
   create_table "assessments", :force => true do |t|
     t.string   "state"
@@ -36,6 +36,21 @@ ActiveRecord::Schema.define(:version => 20130212185738) do
     t.float    "assessed"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+  end
+
+  create_table "cities", :force => true do |t|
+    t.integer  "county_id"
+    t.string   "name"
+    t.integer  "modifier"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "counties", :force => true do |t|
+    t.integer  "state_id"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "muni_codes", :force => true do |t|
@@ -89,6 +104,12 @@ ActiveRecord::Schema.define(:version => 20130212185738) do
     t.integer  "max_price"
     t.integer  "min_sq_ft"
     t.integer  "max_taxes"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "states", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
