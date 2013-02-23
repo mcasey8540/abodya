@@ -15,7 +15,7 @@
 <%= form_for @search, :validate => true do |f| %>
   <div class="field">
     <%= f.label :state %>
-    <%= f.collection_select( :state_id, State.all.uniq, :id, :name, {:include_blank => true}) %>
+    <%= f.collection_select( :state_id, State.order(:name), :id, :name, {:include_blank => true}) %>
   </div>
   <div class="field">
     <%= f.label :county %>
