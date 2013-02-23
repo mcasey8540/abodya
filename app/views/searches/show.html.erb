@@ -3,7 +3,7 @@
 </br>
 
 <h3 id="properties-count"><%= "We found #{@search.assessments.size} homes for you!"%></h3>
-
+	
 <table class="table table-striped">
 
 	<tr>
@@ -16,10 +16,10 @@
 	</tr>
 
 	<% @search.assessments.each do |property| %>
-	
+
 	<tr>
-		<td><%=property.state%></td>
-		<td><%=property.municipality%></td>
+		<td><%=property.county_name%></td>
+		<td><%=property.city_name%></td>
 		<td><%=property.property_location%></td>
 		<td><%=property.square_feet%></td>
 		<td>$<%=property.taxes_one.to_i%></td>		
