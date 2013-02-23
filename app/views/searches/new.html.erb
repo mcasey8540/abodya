@@ -1,3 +1,4 @@
+
 <h3>My Dream Home</h3>
 
 <% if notice %>
@@ -13,31 +14,33 @@
 
 <%= form_for @search, :validate => true do |f| %>
   <div class="field">
-    <%= f.label :state %>
-    <%= f.collection_select(:state, Assessment.select(:state).uniq, :state, :state) %>
+    <%= f.label :state_id %>
+    <%= f.select("state", State.select(:name).uniq.collect {|p| [p.name] }, {:include_blank => true}) %>
   </div>
   <div class="field">
-    <%= f.label :county %>
-    <%= f.collection_select(:county, Assessment.select(:county).uniq, :county, :county) %>
+    <%= f.label :county_id %>
+    <%= f.select("county", County.select(:name).uniq.collect {|p| [p.name] }, {:include_blank => true}) %>
   </div>
   <div class="field">
-    <%= f.label :district, "City" %>
-    <%= f.collection_select(:district, Assessment.select(:municipality).uniq.order('municipality'), :municipality, :municipality) %>
+    <%= f.label :district_id, "City" %>
+    <%= f.select("district", City.select(:name).uniq.order("name ASC").collect {|p| [p.name] }, {:include_blank => true}) %>
   </div>
   <div class="field">
-    <%= f.label :min_price, "Price Range" %>
+    <%= f.label :min_price_id, "Price Range" %>
     $ <%= f.text_field :min_price, size: 10, :placeholder => 'ex 150000' %> -
     $ <%= f.text_field :max_price, size: 10, :placeholder => 'ex 250000' %>
   </div>
   <div class="field">
-    <%= f.label :min_price, "Minimum Square Feet" %>
+    <%= f.label :min_price_id, "Minimum Square Feet" %>
     <%= f.text_field :min_sq_ft, size: 10, :placeholder => 'ex 1900' %>
   </div>  
   <div class="field">
-    <%= f.label :min_price, "Maximum Annual Tax" %>
+    <%= f.label :min_price_id, "Maximum Annual Tax" %>
    $ <%= f.text_field :max_taxes, size: 10, :placeholder => 'ex 9000' %>
   </div> 
   </br> 
   <div class="actions"><%= f.submit "Search" %></div>
+  <%= puts params %>
 <% end %>
+
 

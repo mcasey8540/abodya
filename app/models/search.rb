@@ -1,5 +1,5 @@
 class Search < ActiveRecord::Base
-  attr_accessible :district, :max_price, :max_taxes, :min_price, :min_sq_ft, :state, :county
+  attr_accessible :state, :county, :district, :max_price, :max_taxes, :min_price, :min_sq_ft 
   validates :max_price, :min_price, :max_taxes, :min_sq_ft, presence: :true
   validates :max_price,:min_price,:min_sq_ft, :max_taxes, :numericality => {:only_integer => true}
 

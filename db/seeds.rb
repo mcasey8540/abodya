@@ -9,24 +9,23 @@ class CountyAssessment
 	end
 
 	def get_csv(line_number)
-            #CSV.foreach("#{Rails.root}/db/data/nj/bergen.csv") do |row|
 
 		CSV.foreach("#{Rails.root}/db/data/nj/bergen.csv") do |row|
 	          		
 		city = ""
        	case row[0].to_i
             when 201   
-                  city =  "Allendale "
+                  city = "Allendale "
             when 202    
-                  city =  "Alpine "
+                  city = "Alpine "
             when 203    
-                  city =  "Bergenfield "
+                  city = "Bergenfield "
             when 204    
                   city = "Bogota "
             when 205    
                   city = "Carlstadt "
             when 206    
-                  city = "Cliffside Park Boroug" 
+                  city = "Cliffside Park" 
             when 207    
                   city = "Closter "
             when 208    
@@ -118,7 +117,7 @@ class CountyAssessment
             when 251    
                   city = "Ridgewood Village"
             when 252    
-                  city = "River Edge Boroug"
+                  city = "River Edge"
             when 253    
                   city = "River Vale Township"
             when 254    
@@ -140,7 +139,7 @@ class CountyAssessment
             when 262    
                   city = "Teterboro "
             when 263    
-                  city = "Upper Saddle River Bo" 
+                  city = "Upper Saddle River" 
             when 264    
                   city = "Waldwick "
             when 265    
@@ -150,7 +149,7 @@ class CountyAssessment
             when 267    
                   city = "Westwood "
             when 268    
-                  city = "Woodcliff Lake Boroug" 
+                  city = "Woodcliff Lake" 
             when 269    
                   city = "Wood-Ridge "
             when 270    
@@ -159,7 +158,7 @@ class CountyAssessment
            	      city =  "UNKNOWN"
             end
 
-		if line_number > 224114 
+		#if line_number > 224114 
 			Assessment.create!(
 				:state=>"New Jersey",
 				:county=>"Bergen",
@@ -183,7 +182,7 @@ class CountyAssessment
 				:assessed=>row[56] 
 			)
 		puts "#{line_number} #{city}"
-		end
+		#end
 	line_number += 1
 	end
 

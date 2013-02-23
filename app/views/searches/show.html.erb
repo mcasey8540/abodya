@@ -16,13 +16,14 @@
 	</tr>
 
 	<% @search.assessments.each do |property| %>
+	
 	<tr>
-		<td><%= property.state%></td>
+		<td><%=property.state%></td>
 		<td><%=property.municipality%></td>
 		<td><%=property.property_location%></td>
 		<td><%=property.square_feet%></td>
-		<td>$ <%=property.taxes_one.to_i%></td>		
-		<td>$ <%=property.assessed.to_i%></td>
+		<td>$<%=property.taxes_one.to_i%></td>		
+		<td>$<%=property.assessed.to_i%></td>
 	</tr>
 
 	<% end %> 

@@ -2,6 +2,7 @@ class SearchesController < ApplicationController
 
 	def new
   	@search = Search.new
+    puts params
   end
 
   def create

@@ -1,4 +1,4 @@
 class City < ActiveRecord::Base
-  attr_accessible :county_id, :modifier, :name
+  attr_accessible :county_id, :name
   belongs_to :county
 end
