@@ -14,16 +14,19 @@
 
 <%= form_for @search, :validate => true do |f| %>
   <div class="field">
-    <%= f.label :state_id %>
-    <%= f.select("state", State.select(:name).uniq.collect {|p| [p.name] }, {:include_blank => true}) %>
+    <%= f.label :state %>
+    <%= f.collection_select( :state_id, State.all.uniq, :id, :name, {:include_blank => true}) %>
   </div>
   <div class="field">
-    <%= f.label :county_id %>
-    <%= f.select("county", County.select(:name).uniq.collect {|p| [p.name] }, {:include_blank => true}) %>
+    <%= f.label :county %>
+
+    <%= f.grouped_collection_select :county_id, State.order(:name), :counties, :name, :id, :name, include_blank: true %>
+
   </div>
   <div class="field">
-    <%= f.label :district_id, "City" %>
-    <%= f.select("district", City.select(:name).uniq.order("name ASC").collect {|p| [p.name] }, {:include_blank => true}) %>
+    <%= f.label :city %>
+   
+   <%= f.grouped_collection_select :city_code, County.order(:name), :cities, :name, :city_code, :name, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :min_price_id, "Price Range" %>

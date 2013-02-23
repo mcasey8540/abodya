@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(:version => 20130223014305) do
 
   create_table "assessments", :force => true do |t|
-    t.string   "state"
-    t.string   "county"
-    t.string   "municipality"
+    t.integer  "state_id"
+    t.integer  "county_id"
+    t.integer  "city_code"
     t.string   "property_location"
     t.string   "property_class"
     t.string   "owner_name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20130223014305) do
   create_table "cities", :force => true do |t|
     t.integer  "county_id"
     t.string   "name"
+    t.integer  "city_code"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -53,9 +54,9 @@ ActiveRecord::Schema.define(:version => 20130223014305) do
   end
 
   create_table "searches", :force => true do |t|
-    t.string   "county"
-    t.string   "state"
-    t.string   "district"
+    t.integer  "state_id"
+    t.integer  "county_id"
+    t.integer  "city_code"
     t.integer  "min_price"
     t.integer  "max_price"
     t.integer  "min_sq_ft"

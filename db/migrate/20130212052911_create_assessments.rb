@@ -1,9 +1,9 @@
 class CreateAssessments < ActiveRecord::Migration
   def change
     create_table :assessments do |t|
-			t.string 	:state
-			t.string  :county
-			t.string  :municipality
+			t.integer :state_id
+			t.integer :county_id
+			t.integer :city_code
 			t.string 	:property_location
 			t.string  :property_class
 			t.string 	:owner_name
