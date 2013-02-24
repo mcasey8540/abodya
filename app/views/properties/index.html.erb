@@ -4,10 +4,18 @@
   	<h2>Search Beyond the Listings</h2>
   	<h2><%="Over #{@assessment_count} Properties"%></h2>
   </div>
-</br>
+	</br>
  		<%= link_to "Find My Home", new_search_path, class: "btn btn-primary btn-large" %>
- 		<div>
   </br>
+</div>
+
+<div class="row">
+  <div class="span3"><h2 class="text-center">Buyers</h2>
+  	Search and post your criteria for homes not yet on the market  </div>
+  <div class="span1"></div>
+  <div class="span3"><h2 class="text-center">Sellers</h2>See whose searching for homes in your area and connect with prospective buyers</div>
+ 	<div class="span1"></div>
+  <div class="span3"><h2 class="text-center">Agents</h2>Help your clients find their dream home. See new search requests and connect with prospective sellers</div>
 </div>
 
 <% unless @properties.nil? %>
