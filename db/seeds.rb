@@ -10,7 +10,7 @@ class CountyAssessment
 
 	def get_csv(line_number)
 
-		CSV.foreach("#{Rails.root}/db/data/nj/bergen.csv") do |row|
+		CSV.foreach("#{Rails.root}/db/data/nj/monmouth.csv") do |row|
 	          		
 		# city = ""
   #      	case row[0].to_i
@@ -161,7 +161,7 @@ class CountyAssessment
 		#if line_number > 224114 
 			Assessment.create!(
 				:state_id=>1,
-				:county_id=>1,
+				:county_id=>2,
 				:city_code=>row[0],
 				:property_location=>row[4], 
 				:property_class=>row[5], 
@@ -188,127 +188,12 @@ class CountyAssessment
 
 	end
 
-	# def get_muni_code
-	# 	CSV.foreach("/Users/michaelcasey/Desktop/Code/abodya/county_data/nj_muni_codes.csv") do |row|
-	# 		MuniCode.create!(
-	# 			:county=>row[0],
-	# 			:city=>row[1],
-	# 			:muni_code=>row[2]
-	# 		)
-	# 	end
-	# end
 
 end
 
 n = CountyAssessment.new
 
-#Monmouth Municipal Codes
-            # when 1301 
-            #       city =  "Aberdeen Township" 
-            # when 1302 
-            #       city =  "Allenhurst " 
-            # when 1303 
-            #       city =  "Allentown " 
-            # when 1304 
-            #       city =  "Asbury Park City" 
-            # when 1305 
-            #       city =  "Atlantic Highlands Bor." 
-            # when 1306 
-            #       city =  "Avon-by-the-Sea Bor."
-            # when 1307 
-            #       city =  "Belmar "
-            # when 1308 
-            #       city =  "Bradley Beach "
-            # when 1309 
-            #       city =  "Brielle "
-            # when 1310 
-            #       city =  "Colts Neck Township"
-            # when 1311   
-            #       city =  "Deal "
-            # when 1312 
-            #       city =  "Eatontown "
-            # when 1313 
-            #       city =  "Englishtown "
-            # when 1314 
-            #       city =  "Fair Haven "
-            # when 1315 
-            #       city =  "Farmingdale "
-            # when 1316 
-            #       city =  "Freehold "
-            # when 1317 
-            #       city =  "Freehold Township"
-            # when 1318 
-            #       city =  "Hazlet Township"
-            # when 1319 
-            #       city =  "Highlands "
-            # when 1320 
-            #       city =  "Holmdel Township"
-            # when 1321 
-            #       city =  "Howell Township"
-            # when 1322 
-            #       city =  "Interlaken "
-            # when 1323 
-            #       city =  "Keansburg "
-            # when 1324 
-            #       city =  "Keyport "
-            # when 1346 
-            #       city =  "Lake Como "
-            # when 1325 
-            #       city =  "Little Silver "
-            # when 1326 
-            #       city =  "Loch Arbour Village"
-            # when 1327 
-            #       city =  "Long Branch City"
-            # when 1328 
-            #       city =  "Manalapan Township"
-            # when 1329 
-            #       city =  "Manasquan "
-            # when 1330 
-            #       city =  "Marlboro Township"
-            # when 1331 
-            #       city =  "Matawan "
-            # when 1332 
-            #       city =  "Middletown Township"
-            # when 1333 
-            #       city =  "Millstone Township"
-            # when 1334 
-            #       city =  "Monmouth Beach "
-            # when 1336 
-            #       city =  "Neptune City "
-            # when 1335 
-            #       city =  "Neptune Township"
-            # when 1337 
-            #       city =  "Ocean Township"
-            # when 1338 
-            #       city =  "Oceanport "
-            # when 1339 
-            #       city =  "Red Bank "
-            # when 1340 
-            #       city =  "Roosevelt "
-            # when 1341 
-            #       city =  "Rumson "
-            # when 1342 
-            #       city =  "Sea Bright "
-            # when 1343 
-            #       city =  "Sea Girt "
-            # when 1344 
-            #       city =  "Shrewsbury "
-            # when 1345 
-            #       city =  "Shrewsbury Township"
-            # when 1347 
-            #       city =  "Spring Lake "
-            # when 1348 
-            #       city =  "Spring Lake Heights Bor."
-            # when 1349 
-            #       city =  "Tinton Falls "
-            # when 1350 
-            #       city =  "Union Beach "
-            # when 1351 
-            #       city =  "Upper Freehold Township"
-            # when 1352 
-            #       city =  "Wall Township"
-            # when 1353 
-            #       city =  "West Long Branch Boro"
+
 
 
 
