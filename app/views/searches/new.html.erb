@@ -1,5 +1,5 @@
 
-<h3>My Dream Home</h3>
+<h3>Tell us about your dream home</h3>
 
 <% if notice %>
   <div class="alert alert-block">
@@ -12,7 +12,7 @@
   </div>
 <% end %>
 
-<%= form_for @search, :validate => true do |f| %>
+<%= form_for @search do |f| %>
   <div class="field">
     <%= f.label :state %>
     <%= f.collection_select( :state_id, State.order(:name), :id, :name, {:include_blank => true}) %>
@@ -28,22 +28,29 @@
    
    <%= f.grouped_collection_select :city_code, County.order(:name), :cities, :name, :city_code, :name, include_blank: true %>
   </div>
-  <div class="field">
-    <%= f.label :min_price_id, "Price Range" %>
-    $ <%= f.text_field :min_price, size: 10, :placeholder => 'ex 150000' %> -
-    $ <%= f.text_field :max_price, size: 10, :placeholder => 'ex 250000' %>
-  </div>
-  <div class="field">
-    <%= f.label :min_price_id, "Minimum Square Feet" %>
-    <%= f.text_field :min_sq_ft, size: 10, :placeholder => 'ex 1900' %>
-  </div>  
-  <div class="field">
-    <%= f.label :min_price_id, "Maximum Annual Tax" %>
-   $ <%= f.text_field :max_taxes, size: 10, :placeholder => 'ex 9000' %>
-  </div> 
+  </br>
+  <p>
+  <label for="amount">Price range:</label>
+  <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" />
+  </p>
+<div id="slider-range" style="width:400px"></div>
+<%= f.hidden_field :max_price, { :value => 0 } %>
+<%= f.hidden_field :min_price, { :value => 0 } %>
+</br>
+<p>
+  <label for="amount_square_feet">Minimum Size:</label>
+  <input type="text" id="amount_square_feet" style="border: 0; color: #f6931f; font-weight: bold;" />
+</p>
+<div id="slider-range-sq-ft" style="width:400px"></div>
+<%= f.hidden_field :min_sq_ft, { :value => 90000000 } %>
+</br>
+<p>
+  <label for="amount_max_tax">Maximum Taxes:</label>
+  <input type="text" id="amount_max_tax" style="border: 0; color: #f6931f; font-weight: bold;" />
+  </p>
+<div id="slider-range-max-tax" style="width:400px"></div>
+
+<%= f.hidden_field :max_taxes, { :value => 0 } %>
   </br> 
-  <div class="actions"><%= f.submit "Search" %></div>
-  <%= puts params %>
+    <%= f.submit "Search", class: "btn-info"%>
 <% end %>
-
-
