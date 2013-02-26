@@ -15,4 +15,8 @@ class SearchesController < ApplicationController
     @search = Search.find(params[:id])
   end
 
+  def index
+    
+  end
+
 end
