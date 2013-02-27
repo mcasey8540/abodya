@@ -10,6 +10,7 @@ gem 'bootstrap-sass'
 gem 'delayed_job_active_record'
 gem 'daemons'
 gem 'nokogiri'
+gem 'devise'
 
 
 group :assets do
