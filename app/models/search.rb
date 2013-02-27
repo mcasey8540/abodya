@@ -1,7 +1,9 @@
 class Search < ActiveRecord::Base
-  attr_accessible :state_id, :county_id, :city_code, :max_price, :max_taxes, :min_price, :min_sq_ft 
+  attr_accessible :state_id, :county_id, :city_code, :max_price, :max_taxes, :min_price, :min_sq_ft, :user_id 
   validates :max_price, :min_price, :max_taxes, :min_sq_ft, presence: :true
   validates :max_price,:min_price,:min_sq_ft, :max_taxes, :numericality => {:only_integer => true}
+
+  belongs_to :user
 
  	def assessments
  		assessments = Assessment.where("state_id = ? AND county_id = ? AND city_code = ? AND assessed >= ? AND assessed <= ? AND square_feet >= ? AND taxes_one <= ?", 
