@@ -1,5 +1,7 @@
 class SearchesController < ApplicationController
 
+  before_filter :authenticate_user! #, except: [:index, :show]
+
   respond_to :html, :js
 
 	def new
