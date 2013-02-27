@@ -1,0 +1,39 @@
+<ul class="nav nav-tabs">
+  <li>
+  	<a href="/searches/new">Search</a>
+  </li>
+  <li>
+    <a href="/searches">My Searches</a>
+  </li>
+  <li class="active">
+  	<a href="#">My Favorites</a>
+  </li>
+</ul>
+
+<table class="table table-striped">
+
+	<tr>
+		<th>State</th>
+		<th>County</th>
+		<th>City</th>
+		<th>Property Location</th>
+		<th>Square Feet</th>
+		<th><%= "#{Time.now.year - 1} Taxes"%></th>		
+		<th>Net Taxable Value</th>
+	</tr>
+
+	<% @favorites.each do |a| %>
+	<tr>
+		<td><%=a.assessment.state_name%></td>
+		<td><%=a.assessment.county_name%></td>
+		<td><%=a.assessment.city_name%></td>
+		<td><%=a.assessment.property_location%></td>
+		<td><%=a.assessment.square_feet%></td>
+		<td>$<%=a.assessment.taxes_one.to_i%></td>		
+		<td>$<%=a.assessment.assessed.to_i%></td>
+	<tr>
+
+	<% end %> 
+
+ 	
+</table>
