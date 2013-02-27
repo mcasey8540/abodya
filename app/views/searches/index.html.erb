@@ -1,8 +1,42 @@
-<h3>See whose searching for homes in your area</h3>
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#">Searches</a>
+  </li>
+  <li>
+  	<a href="#">My Favorites</a>
+  </li>
+</ul>
 
-<h4>Let's start by finding your home</h4>
+<table class="table table-striped">
 
+	<tr>
+		<th>Date</th>
+		<th>State</th>
+		<th>County</th>
+		<th>City</th>
+		<th>Max Price</th>
+		<th>Min Price</th>		
+		<th>Min Square Feet</th>
+		<th>Max Taxes</th>
+	</tr>
 
+	<% @user_searches.each do |search| %>
+
+	<tr>
+		<td><%=search.created_at.to_date%></td>
+		<td><%=search.state_id%></td>
+		<td><%=search.county_id%></td>
+		<td><%=search.city_code%></td>
+		<td>$<%=search.max_price%></td>
+		<td>$<%=search.min_price%></td>		
+		<td><%=search.min_sq_ft%></td>
+		<td>$<%=search.max_taxes%></td>
+	</tr>
+
+	<% end %> 
+
+ 	
+</table>
 
 
 

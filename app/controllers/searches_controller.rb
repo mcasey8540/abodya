@@ -9,8 +9,11 @@ class SearchesController < ApplicationController
   end
 
   def create
-    @search = Search.create!(params[:search])
-    redirect_to(@search)
+    @user = current_user
+    @search = @user.searches.create!(params[:search])
+    if @search.save
+      redirect_to(@search)
+    end
   end
 
   def show
@@ -18,7 +21,8 @@ class SearchesController < ApplicationController
   end
 
   def index
-    
+    @user = current_user
+    @user_searches = @user.searches
   end
 
 end
