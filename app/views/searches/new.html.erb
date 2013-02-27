@@ -1,17 +1,6 @@
 
 <h3>Tell us about your dream home</h3>
 
-<% if notice %>
-  <div class="alert alert-block">
-    <strong>Uh oh!</strong>
-    <ul>
-      <% notice.gsub(/and/,"").split(",").each do |error| %>
-        <li><%= error %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
 <%= form_for @search do |f| %>
   <div class="field">
     <%= f.label :state %>
