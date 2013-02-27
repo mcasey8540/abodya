@@ -11,6 +11,10 @@ class Search < ActiveRecord::Base
     assessments
  	end
 
+ 	def state_name
+ 		State.where("id = ?", state_id).first.name 
+ 	end
+
 	def county_name
  		County.where("id = ?", county_id).first.name 
  	end
