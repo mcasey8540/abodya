@@ -25,6 +25,7 @@
 		<th>Square Feet</th>
 		<th><%= "#{Time.now.year - 1} Taxes"%></th>		
 		<th>Net Taxable Value</th>
+		<th>Tag</th>
 	</tr>
 
 	<% @search.assessments.each do |property| %>
@@ -36,6 +37,9 @@
 		<td><%=property.square_feet%></td>
 		<td>$<%=property.taxes_one.to_i%></td>		
 		<td>$<%=property.assessed.to_i%></td>
+		<td>
+				<%= link_to "Tag", add_favorite_path(property.id), id: "new_favorite_#{property.id}", remote: true %>
+		</td>
 	</tr>
 
 	<% end %> 
