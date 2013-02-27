@@ -1,6 +1,9 @@
 <ul class="nav nav-tabs">
+  <li>
+  	<a href="/searches/new">Search</a>
+  </li>
   <li class="active">
-    <a href="#">Searches</a>
+    <a href="#">My Searches</a>
   </li>
   <li>
   	<a href="#">My Favorites</a>
@@ -24,9 +27,9 @@
 
 	<tr>
 		<td><%=search.created_at.to_date%></td>
-		<td><%=search.state_id%></td>
-		<td><%=search.county_id%></td>
-		<td><%=search.city_code%></td>
+		<td><%=search.state_name%></td>
+		<td><%=search.county_name%></td>
+		<td><%=search.city_name%></td>
 		<td>$<%=search.max_price%></td>
 		<td>$<%=search.min_price%></td>		
 		<td><%=search.min_sq_ft%></td>
