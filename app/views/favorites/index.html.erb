@@ -20,10 +20,11 @@
 		<th>Square Feet</th>
 		<th><%= "#{Time.now.year - 1} Taxes"%></th>		
 		<th>Net Taxable Value</th>
+		<th>Remove</th>
 	</tr>
 
 	<% @favorites.each do |a| %>
-	<tr>
+	<tr id=<%="favorite_#{a.id}"%> >
 		<td><%=a.assessment.state_name%></td>
 		<td><%=a.assessment.county_name%></td>
 		<td><%=a.assessment.city_name%></td>
@@ -31,6 +32,7 @@
 		<td><%=a.assessment.square_feet%></td>
 		<td>$<%=a.assessment.taxes_one.to_i%></td>		
 		<td>$<%=a.assessment.assessed.to_i%></td>
+		<td><%= link_to raw('<i class="icon-trash"></i>'), a, method: :delete, remote: :true %></li>
 	<tr>
 
 	<% end %> 

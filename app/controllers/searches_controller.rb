@@ -22,7 +22,7 @@ class SearchesController < ApplicationController
 
   def index
     @user = current_user
-    @user_searches = @user.searches
+    @user_searches = @user.searches.order('created_at DESC')
   end
 
 end
