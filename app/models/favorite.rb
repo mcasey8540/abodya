@@ -3,8 +3,4 @@ class Favorite < ActiveRecord::Base
  	belongs_to :assessment
  	belongs_to :user
 
- 	def assessments
- 		Assessment.select(f.assessment_id)
- 	end
-
 end

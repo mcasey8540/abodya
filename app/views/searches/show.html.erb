@@ -38,7 +38,7 @@
 		<td>$<%=property.taxes_one.to_i%></td>		
 		<td>$<%=property.assessed.to_i%></td>
 		<td>
-				<%= link_to "Tag", add_favorite_path(property.id), id: "new_favorite_#{property.id}", remote: true %>
+				<%= link_to raw('<i class="icon-star-empty"></i>'), add_favorite_path(property.id), id: "new_favorite_#{property.id}", remote: true %>
 		</td>
 	</tr>
 

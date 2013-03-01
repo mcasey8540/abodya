@@ -1,0 +1,42 @@
+<%= form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.collection_select( :state_id, State.order(:name), :id, :name, {:include_blank => true}) %>
+  </div>
+  <div class="field">
+    <%= f.label :county %>
+
+    <%= f.grouped_collection_select :county_id, State.order(:name), :counties, :name, :id, :name, include_blank: true %>
+
+  </div>
+  <div class="field">
+    <%= f.label :city %>
+   
+   <%= f.grouped_collection_select :city_code, County.order(:name), :cities, :name, :city_code, :name, include_blank: true %>
+  </div>
+  </br>
+  <p>
+  <label for="amount">Price range:</label>
+  <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" />
+  </p>
+<div id="slider-range" style="width:200px"></div>
+<%= f.hidden_field :max_price, { :value => 0 } %>
+<%= f.hidden_field :min_price, { :value => 0 } %>
+</br>
+<p>
+  <label for="amount_square_feet">Minimum Size:</label>
+  <input type="text" id="amount_square_feet" style="border: 0; color: #f6931f; font-weight: bold;" />
+</p>
+<div id="slider-range-sq-ft" style="width:200px"></div>
+<%= f.hidden_field :min_sq_ft, { :value => 90000000 } %>
+</br>
+<p>
+  <label for="amount_max_tax">Maximum Taxes:</label>
+  <input type="text" id="amount_max_tax" style="border: 0; color: #f6931f; font-weight: bold;" />
+  </p>
+<div id="slider-range-max-tax" style="width:200px"></div>
+
+<%= f.hidden_field :max_taxes, { :value => 0 } %>
+  </br> 
+    <%= f.submit "Search", class: "btn-info"%>
+<% end %>

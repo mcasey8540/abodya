@@ -1,34 +1,38 @@
-<div class="hero-unit">
-	<div>
-  	<h1>Your Dream Home Awaits</h1>
-  	<h2>Search Beyond the Listings</h2>
-  	<h2><%="Over #{@assessment_count} Properties"%></h2>
+<div class="row"> 
+  <div class="span6">
+    <div class = "row">
+      <div class="span6">
+        <h3>Buyers</h3>Post the criteria for your dream home. Search for properties not yet listed. Find out when sellers plan to list their homes on the market.
+      </div>
+      <div class = "row"></br></div>
+      <div class="span6">
+        <h3>Sellers</h3>
+        Whether you're looking to sell now or in the future, see whose searching in your neighborhood to guage interest. Connect with buyers who post criteria that matches your home.
+      </div>
+      <div class = "row"></br></div>
+      <div class="span6">
+        <h3>Agents</h3>
+        Post your client's criteria and connect with pre-market sellers to more efficiently find homes.r 
+      </div>
+    </div>
   </div>
-	</br>
-		<div class="btn-group">
-    <button class="btn btn-large btn-info">I'm a ...</button>
-    <button class="btn dropdown-toggle btn-large btn-info" data-toggle="dropdown"><span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><%= link_to "Buyer", new_search_path %></li>
-      <li><%= link_to "Seller", new_seller_path %></li>
-      <li><%= link_to "Agent", new_search_path %></li>
-    </ul>
+    <div class="span1"></div>
+    <div class="span5">
+      <div class="well">
+        <h3>Post Your Search</h>
+        <%= render 'searches/new' %>
+      </div>
+    </div>
   </div>
-  </br>
 </div>
 
-<div class="row">
-  <div class="span3"><h2 class="text-center">Buyers</h2>
+<!-- <div class="row">
+  <div class="span6"><h2 class="text-center">Buyers</h2>
   	Search beyond the listings. Post your criteria for sellers whose homes are not yet on the market.</div>
   <div class="span1"></div>
   <div class="span3"><h2 class="text-center">Sellers</h2>See whose searching for homes in your area and connect with prospective buyers</div>
  	<div class="span1"></div>
   <div class="span3"><h2 class="text-center">Agents</h2>Help your clients find their dream home. See new search requests and connect with prospective sellers</div>
-</div>
+</div> -->
 
-<% unless @properties.nil? %>
-	<div id="properties">
-	  <%= render @properties %>
-	</div>
-<% end %>
+
